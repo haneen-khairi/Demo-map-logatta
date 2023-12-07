@@ -1,6 +1,7 @@
 import React from "react";
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, NavbarMenuToggle, NavbarMenu, NavbarMenuItem} from "@nextui-org/react";
-import Logo from "@/components/Logo";
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from "@nextui-org/react";
+import logo from 'public/logo.png'
+import Image from "next/image";
 
 export default function Header() {
   const menuItems = [
@@ -25,7 +26,12 @@ export default function Header() {
       <NavbarContent className="sm:hidden pr-3" justify="center">
         <NavbarBrand>
           {/* <Logo imageSrc="/assets/images/logo.svg" /> */}
-          <p>Logatta</p>
+          <Image
+            src={logo}
+            width={150}
+            height={100}
+            alt="Picture of the author"
+          />
         </NavbarBrand>
       </NavbarContent>
 
