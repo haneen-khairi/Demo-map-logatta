@@ -1,0 +1,32 @@
+{
+  "name": "logatta",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "react": "latest",
+    "react-dom": "latest",
+    "next": "latest",
+    "@nextui-org/react": "^2.1.13",
+    "axios": "^1.5.1",
+    "@react-google-maps/api": "^2.19.2",
+    "framer-motion": "^10.16.4",
+    "nanoid": "^5.0.2",
+    "react-hook-form": "^7.47.0",
+    "react-toastify": "^9.1.3"
+  },
+  "devDependencies": {
+    "typescript": "latest",
+    "@types/react": "latest",
+    "@types/node": "latest",
+    "@types/react-dom": "latest",
+    "autoprefixer": "latest",
+    "postcss": "latest",
+    "tailwindcss": "latest"
+  }
+}
