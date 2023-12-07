@@ -3,6 +3,10 @@
 @tailwind utilities;
 body {
   direction: rtl;
+  background: url(../public/back.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 
 .navbar {
@@ -53,12 +57,29 @@ body {
 
 .sidebar {
   font-family: "GE SS Tow Medium";
-  background: #f1f3f5;
+  background: rgba(255, 255, 255, 0.6705882353);
   text-align: right;
   padding: 1em 2em;
   position: relative;
   max-height: 80vh;
   overflow-y: auto;
+  max-height: 620px;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+.sidebar::-webkit-scrollbar {
+  width: 7px;
+}
+.sidebar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background: #dedede;
+}
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #c2c2c2;
 }
 
 .LandRealStateInfo {
@@ -91,7 +112,7 @@ body {
 .total-analyses .analyses-card {
   background-color: #fff;
   width: 48%;
-  border-radius: 12px;
+  border-radius: 5px;
   text-align: right;
   padding: 1em 0.8em;
   background-position: center bottom;
@@ -148,7 +169,7 @@ body {
 }
 .parcels-list_item {
   background: #fff;
-  border-radius: 12px;
+  border-radius: 5px;
   margin-top: 1em;
 }
 .parcels-list .item-header {
@@ -159,7 +180,7 @@ body {
   padding: 12px;
 }
 .parcels-list .parcel-average {
-  border-radius: 8px;
+  border-radius: 5px;
   background-color: #eef0f4;
   text-align: center;
   color: #2b5cd2;
@@ -178,7 +199,7 @@ body {
   margin-right: 0.2em;
 }
 .parcels-list .parcel-average .card-title {
-  border-radius: 8px 8px 0 0;
+  border-radius: 5px 5px 0 0;
   font-size: 12px;
   font-family: "GE SS Tow Medium";
   margin: 0;
@@ -191,7 +212,7 @@ body {
 .parcels-list .gather .image-icon {
   width: 48px;
   height: 48px;
-  border-radius: 8px;
+  border-radius: 5px;
   position: absolute;
   right: 0;
   padding: 0.7em;
@@ -256,7 +277,7 @@ body {
   font-family: "Almarai";
 }
 .sidebar-section .section-container {
-  border-radius: 12px;
+  border-radius: 5px;
   background-color: #ffffff;
   padding: 1em;
 }
@@ -274,7 +295,7 @@ body {
   width: 80%;
 }
 .sidebar-section .organization-contact .organization-details img {
-  border-radius: 10px;
+  border-radius: 5px;
   margin-left: 1rem;
 }
 .sidebar-section .organization-contact .organization-details .organization-name {
@@ -301,7 +322,7 @@ body {
   font-family: "Almarai";
   font-weight: 400;
   padding: 10px 1rem;
-  border-radius: 7px;
+  border-radius: 5px;
 }
 
 .parcels-list-title {
@@ -314,7 +335,7 @@ body {
   position: relative;
   color: #0b1a2d;
   background: #fff;
-  border-radius: 12px;
+  border-radius: 5px;
   margin: 3rem 0px;
 }
 .parcels-details-list__item .item-header {
@@ -328,7 +349,7 @@ body {
   font-family: "Almarai";
 }
 .parcels-details-list__item .item-header .parcel-cat {
-  border-radius: 8px;
+  border-radius: 5px;
   font-size: 13px;
   margin-bottom: 0.5em;
   color: #707070;
@@ -372,7 +393,7 @@ body {
 .parcels-details-list__item .parcel-info-list {
   padding: 0 !important;
   border: 1px solid #dee3e6;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 .parcels-details-list__item .block-info {
   width: 100%;
@@ -563,4 +584,8 @@ body {
   .total-area .area-value {
     font-size: 15px;
   }
+}
+.map-box {
+  border-radius: 5px;
+  overflow: hidden;
 }/*# sourceMappingURL=globals.css.map */

@@ -1,8 +1,13 @@
 @import "~tailwindcss/base";
 @import "~tailwindcss/components";
 @import "~tailwindcss/utilities";
+ 
 body{
   direction: rtl;
+  background: url(../public/back.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 .navbar{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -61,16 +66,36 @@ $grayBg: #f1f3f5;
 
 .sidebar {
   font-family: "GE SS Tow Medium";
-  background: $grayBg;
+  background: #ffffffab;
   text-align: right;
   padding: 1em 2em;
   position: relative;
   max-height: 80vh;
-  overflow-y: auto;
+  overflow-y: auto; 
+  max-height: 620px;
   // &.fixed-sidebar {
   //   height: 100%;
   //   overflow: auto;
   // }
+  /* width */
+&::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+&::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+&::-webkit-scrollbar-thumb {
+  background: #dedede;
+}
+
+/* Handle on hover */
+&::-webkit-scrollbar-thumb:hover {
+  background: #c2c2c2;
+}
 }
 .LandRealStateInfo {
   text-align: right;
@@ -101,7 +126,7 @@ $grayBg: #f1f3f5;
   .analyses-card {
     background-color: #fff;
     width: 48%;
-    border-radius: 12px;
+    border-radius: 5px;
     text-align: right;
     padding: 1em 0.8em;
     background-position: center bottom;
@@ -161,7 +186,7 @@ $grayBg: #f1f3f5;
   padding-bottom: 1em;
   &_item {
     background: #fff;
-    border-radius: 12px;
+    border-radius: 5px;
     margin-top: 1em;
   }
 
@@ -174,7 +199,7 @@ $grayBg: #f1f3f5;
   }
 
   .parcel-average {
-    border-radius: 8px;
+    border-radius: 5px;
     background-color: #eef0f4;
     text-align: center;
     color: #2b5cd2;
@@ -194,7 +219,7 @@ $grayBg: #f1f3f5;
       margin-right: 0.2em;
     }
     .card-title {
-      border-radius: 8px 8px 0 0;
+      border-radius: 5px 5px 0 0;
       font-size: 12px;
       font-family: "GE SS Tow Medium";
       margin: 0;
@@ -209,7 +234,7 @@ $grayBg: #f1f3f5;
     .image-icon {
       width: 48px;
       height: 48px;
-      border-radius: 8px;
+      border-radius: 5px;
       position: absolute;
       right: 0;
       padding: 0.7em;
@@ -282,7 +307,7 @@ $grayBg: #f1f3f5;
   }
 
   .section-container {
-    border-radius: 12px;
+    border-radius: 5px;
     background-color: #ffffff;
     padding: 1em;
   }
@@ -299,7 +324,7 @@ $grayBg: #f1f3f5;
       align-items: center;
       width: 80%;
       img {
-        border-radius: 10px;
+        border-radius: 5px;
         margin-left: 1rem;
       }
       .organization-name {
@@ -329,7 +354,7 @@ $grayBg: #f1f3f5;
       font-family: "Almarai";
       font-weight: 400;
       padding: 10px 1rem;
-      border-radius: 7px;
+      border-radius: 5px;
     }
   }
 }
@@ -345,7 +370,7 @@ $grayBg: #f1f3f5;
     position: relative;
     color: $black;
     background: #fff;
-    border-radius: 12px;
+    border-radius: 5px;
     margin: 3rem 0px;
 
     .item-header {
@@ -359,7 +384,7 @@ $grayBg: #f1f3f5;
         font-family: "Almarai";
       }
       .parcel-cat {
-        border-radius: 8px;
+        border-radius: 5px;
         font-size: 13px;
         margin-bottom: 0.5em;
         color: #707070;
@@ -408,7 +433,7 @@ $grayBg: #f1f3f5;
     .parcel-info-list {
       padding: 0 !important;
       border: 1px solid #dee3e6;
-      border-radius: 10px;
+      border-radius: 5px;
     }
     .block-info {
       width: 100%;
@@ -704,4 +729,8 @@ $grayBg: #f1f3f5;
       font-size: 15px;
     }
   }
+}
+.map-box{
+  border-radius: 5px;
+  overflow: hidden;
 }

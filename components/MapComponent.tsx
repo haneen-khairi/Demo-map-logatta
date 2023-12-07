@@ -21,6 +21,6 @@ export default function MapComponent(){
     };
   }, []);
 
-  return <div id="map-container" style={{ width: '100%', height: '400px' }} />;
+  return <div id="map-container" style={{ width: '100%', height: '620px' }} />;
 };
 
