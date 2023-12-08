@@ -1,0 +1,576 @@
+[
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 10,
+   "piece_key": 11200100000015,
+   "space": 5410.8,
+   "Column8": 1,
+   "lat": 35.875418,
+   "lng": 32.037129
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 10,
+   "piece_key": 11200100000015,
+   "space": 5410.8,
+   "Column8": 2,
+   "lat": 35.875231,
+   "lng": 32.037079
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 10,
+   "piece_key": 11200100000015,
+   "space": 5410.8,
+   "Column8": 3,
+   "lat": 35.875029,
+   "lng": 32.037024
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 10,
+   "piece_key": 11200100000015,
+   "space": 5410.8,
+   "Column8": 4,
+   "lat": 35.874901,
+   "lng": 32.037291
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 10,
+   "piece_key": 11200100000015,
+   "space": 5410.8,
+   "Column8": 5,
+   "lat": 35.875172,
+   "lng": 32.037338
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 10,
+   "piece_key": 11200100000015,
+   "space": 5410.8,
+   "Column8": 6,
+   "lat": 35.875201,
+   "lng": 32.037342
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 10,
+   "piece_key": 11200100000015,
+   "space": 5410.8,
+   "Column8": 7,
+   "lat": 35.875418,
+   "lng": 32.037129
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 15,
+   "Column8": 1,
+   "lat": 35.872937,
+   "lng": 32.035963
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 15,
+   "Column8": 2,
+   "lat": 35.872492,
+   "lng": 32.035699
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 15,
+   "Column8": 3,
+   "lat": 35.87229,
+   "lng": 32.03574
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 15,
+   "Column8": 4,
+   "lat": 35.872657,
+   "lng": 32.036155
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 15,
+   "Column8": 5,
+   "lat": 35.872857,
+   "lng": 32.036303
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 15,
+   "Column8": 6,
+   "lat": 35.873095,
+   "lng": 32.036428
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 15,
+   "Column8": 7,
+   "lat": 35.873109,
+   "lng": 32.036424
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 15,
+   "Column8": 8,
+   "lat": 35.873532,
+   "lng": 32.036316
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 15,
+   "Column8": 9,
+   "lat": 35.873188,
+   "lng": 32.036113
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 15,
+   "Column8": 10,
+   "lat": 35.872937,
+   "lng": 32.035963
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 28,
+   "Column8": 1,
+   "lat": 35.856825,
+   "lng": 32.031213
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 28,
+   "Column8": 2,
+   "lat": 35.855702,
+   "lng": 32.031191
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 28,
+   "Column8": 3,
+   "lat": 35.854492,
+   "lng": 32.032002
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 28,
+   "Column8": 4,
+   "lat": 35.854723,
+   "lng": 32.032626
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 28,
+   "Column8": 5,
+   "lat": 35.854779,
+   "lng": 32.032692
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 28,
+   "Column8": 6,
+   "lat": 35.854856,
+   "lng": 32.032689
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 28,
+   "Column8": 7,
+   "lat": 35.855718,
+   "lng": 32.032603
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 28,
+   "Column8": 8,
+   "lat": 35.85586,
+   "lng": 32.03259
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 28,
+   "Column8": 9,
+   "lat": 35.856402,
+   "lng": 32.032544
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 28,
+   "Column8": 10,
+   "lat": 35.856888,
+   "lng": 32.032525
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 28,
+   "Column8": 11,
+   "lat": 35.857507,
+   "lng": 32.032501
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 28,
+   "Column8": 12,
+   "lat": 35.858081,
+   "lng": 32.03248
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 28,
+   "Column8": 13,
+   "lat": 35.858736,
+   "lng": 32.032456
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 28,
+   "Column8": 14,
+   "lat": 35.858864,
+   "lng": 32.032451
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 28,
+   "Column8": 15,
+   "lat": 35.859272,
+   "lng": 32.032436
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 28,
+   "Column8": 16,
+   "lat": 35.859144,
+   "lng": 32.03192
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 28,
+   "Column8": 17,
+   "lat": 35.859089,
+   "lng": 32.03164
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 28,
+   "Column8": 18,
+   "lat": 35.85867,
+   "lng": 32.031495
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 28,
+   "Column8": 19,
+   "lat": 35.858533,
+   "lng": 32.031447
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 28,
+   "Column8": 20,
+   "lat": 35.857917,
+   "lng": 32.031233
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 28,
+   "Column8": 21,
+   "lat": 35.857066,
+   "lng": 32.031217
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 28,
+   "Column8": 22,
+   "lat": 35.856825,
+   "lng": 32.031213
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 30,
+   "Column8": 1,
+   "lat": 35.854129,
+   "lng": 32.031691
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 30,
+   "Column8": 2,
+   "lat": 35.854036,
+   "lng": 32.031558
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 30,
+   "Column8": 3,
+   "lat": 35.853887,
+   "lng": 32.031578
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 30,
+   "Column8": 4,
+   "lat": 35.853549,
+   "lng": 32.031624
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 30,
+   "Column8": 5,
+   "lat": 35.853475,
+   "lng": 32.031634
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 30,
+   "Column8": 6,
+   "lat": 35.853622,
+   "lng": 32.031932
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 30,
+   "Column8": 7,
+   "lat": 35.853828,
+   "lng": 32.032351
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 30,
+   "Column8": 8,
+   "lat": 35.853844,
+   "lng": 32.032383
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 30,
+   "Column8": 9,
+   "lat": 35.854036,
+   "lng": 32.032424
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 30,
+   "Column8": 10,
+   "lat": 35.854244,
+   "lng": 32.032295
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 30,
+   "Column8": 11,
+   "lat": 35.85432,
+   "lng": 32.032132
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 30,
+   "Column8": 12,
+   "lat": 35.854429,
+   "lng": 32.032001
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 30,
+   "Column8": 13,
+   "lat": 35.854391,
+   "lng": 32.031932
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 30,
+   "Column8": 14,
+   "lat": 35.854303,
+   "lng": 32.031773
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 30,
+   "Column8": 15,
+   "lat": 35.85424,
+   "lng": 32.03174
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 30,
+   "Column8": 16,
+   "lat": 35.854142,
+   "lng": 32.031709
+  },
+  {
+   "government": "العاصمة",
+   "directorate": "شمال عمان",
+   "village": "الجبيهة",
+   "basin": "ابو عوف",
+   "piece_num": 30,
+   "Column8": 17,
+   "lat": 35.854129,
+   "lng": 32.031691
+  }
+ ]
