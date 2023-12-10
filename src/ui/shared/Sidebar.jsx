@@ -20,9 +20,9 @@ export default function SidebarInfo({
                     </div>
                     <div className="total-analyses ">
                         <div className="analyses-card bg-red">
-                            <h3 className="card-title GBF color-light">عدد الصفقات</h3>
+                            <h3 className="card-title GBF color-light">رقم الالقطعة</h3>
                             <div className="chat-and-number ">
-                                <div className="card-number number-bold color-light GBF" id="transactionsTotal">4</div>
+                                <div className="card-number number-bold color-light GBF" id="transactionsTotal">{mapInfo?.properties?.piece_num || "اختار قطعة ارض"}</div>
                                 <div className="peasant number color-red GBF" id="transactionsTotalIncrement">43% <img src="https://www.suhail.ai/static/media/Path-down.8cfca3000395930c2192.svg" alt="" />
                                 </div>
                             </div>
