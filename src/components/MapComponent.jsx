@@ -24,8 +24,8 @@ export default function MapComponent({
 function getColor(averagePricePerMeter) {
   console.log("=== getColor ===", averagePricePerMeter)
   if(averagePricePerMeter && averagePricePerMeter !== undefined){
-    return averagePricePerMeter > 750 ? '#ff0000' :
-    averagePricePerMeter > 350 ? '#FFEDA0' : '#46923C';
+    return averagePricePerMeter > 540 ? '#ff0000' :
+    averagePricePerMeter > 516 ? '#FFEDA0' : '#46923C';
     // return averagePricePerMeter > 750 ? '#ff0000' :
     //        averagePricePerMeter > 350 ? '#FFEDA0' : '#46923C';
   }
@@ -110,7 +110,7 @@ function getColor(averagePricePerMeter) {
               } else {
                 // Feature is deselected, reset its style
                 geojsonLayerRef.current.setStyle((f) => ({
-                  fillOpacity: f.selected ? 1 : 0.2, // Reset the style of all features
+                  fillOpacity: f.selected ? 1 : 0.6, // Reset the style of all features
                 }));
               }
               onCallBackTheMap(feature)
