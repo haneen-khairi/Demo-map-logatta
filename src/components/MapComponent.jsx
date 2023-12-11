@@ -2,23 +2,17 @@ import React, { useEffect, useRef, useState } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import jordonGeo from "../assets/jsons/logatta-new-map.json";
-import jordonNewGeo from "../assets/jsons/processed_data_collection.json";
 
 export default function MapComponent({
   onCallBackTheMap = (e) => {
     return e
   }
 }) {
-  console.log("=== data ===", jordonNewGeo);
     const mapRef = useRef(null);
-    const [selectedPoylgon, setSelectedPolygon] = useState(null);
     const geojsonLayerRef = useRef(null);
 console.log("first", jordonGeo.features[0].geometry.coordinates[0][0][0])
 // Convert JSON data to GeoJSON
-function onSelectPolygon(feature){
-  onCallBackTheMap(feature)
-  setSelectedPolygon(feature.properties.piece_num)
-}
+
     useEffect(() => {
         if (mapRef.current && !mapRef.current._leaflet_id) {
             // const myMap = L.map(mapRef.current).setView([20.59, 58.55], 7)
@@ -83,7 +77,7 @@ function onSelectPolygon(feature){
 
 
       // Create a GeoJSON layer and add it to the map
-      geojsonLayerRef.current = L.geoJson(jordonNewGeo, {
+      geojsonLayerRef.current = L.geoJson(jordonGeo, {
         style: (feature) => ({
           weight: 2,
           opacity: 1,

@@ -1,0 +1,1 @@
+export const API_KEY = "https://open-souq-app-c66xv.ondigitalocean.app/"
