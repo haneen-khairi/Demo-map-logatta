@@ -64,11 +64,8 @@ body {
   position: relative;
   max-height: 80vh;
   overflow-y: auto;
+  min-height: 100%;
   max-height: 620px;
-  /* width */
-  /* Track */
-  /* Handle */
-  /* Handle on hover */
 }
 .sidebar::-webkit-scrollbar {
   width: 7px;
