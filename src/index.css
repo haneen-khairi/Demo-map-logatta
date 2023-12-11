@@ -234,7 +234,7 @@ body {
   margin-right: 0.2em;
 }
 .parcels-list .item-content {
-  padding: 1em;
+  padding:1em .5em;
   position: relative;
 }
 .parcels-list .item-info-card .price {
@@ -252,7 +252,7 @@ body {
 }
 .parcels-list .item-info-card.total-parcels {
   position: absolute;
-  left: 1em;
+  left: .5em;
   top: 1em;
   text-align: left;
 }

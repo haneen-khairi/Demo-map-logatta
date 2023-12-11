@@ -2,16 +2,35 @@ import React, { useEffect, useRef, useState } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import jordonGeo from "../assets/jsons/logatta-new-map.json";
+import parcels from "../assets/jsons/processed_data_collection.json";
 
 export default function MapComponent({
   onCallBackTheMap = (e) => {
     return e
   }
 }) {
+  jordonGeo.features = jordonGeo.features.map((feature) => {
+    const matchingData = parcels.data.find((data) => data.parcel_key === feature.properties.parcel_key);
+    if (matchingData) {
+      feature.properties.average_price_per_meter = matchingData.average_price_per_meter;
+    }
+    return feature;
+  });
+  console.log("jordonGeo", jordonGeo)
+  const color = useRef("")
     const mapRef = useRef(null);
     const geojsonLayerRef = useRef(null);
-console.log("first", jordonGeo.features[0].geometry.coordinates[0][0][0])
 // Convert JSON data to GeoJSON
+function getColor(averagePricePerMeter) {
+  console.log("=== getColor ===", averagePricePerMeter)
+  if(averagePricePerMeter && averagePricePerMeter !== undefined){
+    return averagePricePerMeter > 750 ? '#ff0000' :
+    averagePricePerMeter > 350 ? '#FFEDA0' : '#46923C';
+    // return averagePricePerMeter > 750 ? '#ff0000' :
+    //        averagePricePerMeter > 350 ? '#FFEDA0' : '#46923C';
+  }
+}
+
 
     useEffect(() => {
         if (mapRef.current && !mapRef.current._leaflet_id) {
@@ -23,24 +42,16 @@ console.log("first", jordonGeo.features[0].geometry.coordinates[0][0][0])
                 attribution: '© OpenStreetMap contributors'
             }).addTo(myMap);
 
-            function getColor(d) {
-                return d > 1000 ? '#800026' :
-                    d > 500  ? '#BD0026' :
-                    d > 200  ? '#E31A1C' :
-                    d > 100  ? '#FC4E2A' :
-                    d > 50   ? '#FD8D3C' :
-                    d > 20   ? '#FEB24C' :
-                    d > 10   ? '#FED976' :
-                                '#FFEDA0';
-            }
+
 
             const style = (feature) => ({
-                fillColor: getColor(feature),
+                // fillColor: getColor(feature),
                 weight: 2,
                 opacity: 1,
                 color: 'black',
                 dashArray: '3',
-                fillOpacity: 0.7
+                fillOpacity: feature.selected ? 0.7 : 0.5, // Change fill opacity based on selected state,
+
             });
 
             const highlightFeature = (e) => {
@@ -79,11 +90,12 @@ console.log("first", jordonGeo.features[0].geometry.coordinates[0][0][0])
       // Create a GeoJSON layer and add it to the map
       geojsonLayerRef.current = L.geoJson(jordonGeo, {
         style: (feature) => ({
+          fillColor: getColor(feature.properties.average_price_per_meter),
           weight: 2,
           opacity: 1,
           color: 'black',
           dashArray: '3',
-          fillOpacity: feature.selected ? 0.7 : 0.5, // Change fill opacity based on selected state
+          fillOpacity:  0.5, // Change fill opacity based on selected state,
         }),
         onEachFeature: (feature, layer) => {
           layer.on({
@@ -93,12 +105,12 @@ console.log("first", jordonGeo.features[0].geometry.coordinates[0][0][0])
               if (feature.selected) {
                 // Feature is selected, change its style
                 geojsonLayerRef.current.setStyle((f) => ({
-                  fillOpacity: f === feature ? 0.7 : 0.5, // Highlight the selected feature
+                  fillOpacity: f === feature ? 0.9 : 0.2, // Highlight the selected feature
                 }));
               } else {
                 // Feature is deselected, reset its style
                 geojsonLayerRef.current.setStyle((f) => ({
-                  fillOpacity: f.selected ? 0.7 : 0.5, // Reset the style of all features
+                  fillOpacity: f.selected ? 1 : 0.2, // Reset the style of all features
                 }));
               }
               onCallBackTheMap(feature)
@@ -113,6 +125,7 @@ console.log("first", jordonGeo.features[0].geometry.coordinates[0][0][0])
     return (
         <div>
             <div ref={mapRef} style={{ height: '80vh', width: '100%' }} />
+            {`color ${color.current}`}
         </div>
     );
 }

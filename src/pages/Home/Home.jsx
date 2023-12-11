@@ -47,7 +47,7 @@ export default function Home() {
         <div className="col-span-2">
           {/* <form onSubmit={handleSubmit(filterPieces)}>
           </form> */}
-          <MapComponent onCallBackTheMap={(e) => onCallBackTheMapGetData(e)} />
+          <MapComponent onCallBackTheMap={(e) => onCallBackTheMapGetData(e)} extraInfo={pageDetails} />
           {/* <GoogleMapsComponent onCallBackTheMap={(e) => onCallBackTheMapGetData(e)} /> */}
         </div>
         <div className="col-span-1">
