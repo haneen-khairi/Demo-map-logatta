@@ -114,7 +114,8 @@ export default function SidebarInfo({ mapInfo, extraInfo, ads }) {
                 <div className="LandRealStateInfo">
                   <div className="Info-piece">
                     {/* اسم القطعه / المنطقة */}
-                    <h3 className="city-title">الحمراء</h3>
+                    {/* <h3 className="city-title">الحمراء</h3> */}
+                    <br/>
                   </div>
                 </div>
 

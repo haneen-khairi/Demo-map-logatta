@@ -21,11 +21,13 @@ export default function AdvertiseCard({
         style={{ backgroundColor: "#eef0ff" }}
       >
         <img src={worldIcon} alt="icon" />
+        <br/>
       </div>
-      <div className="title">Advertising Name </div>
+      {/* <div className="title">Advertising Name </div> */}
       <div className="parcels-total-section">
         {/* اسم الاعلان */}
         <span className="parcels-total"> {title} </span>
+   
       </div>
     </div>
     <div className="parcel-average">
@@ -46,7 +48,7 @@ export default function AdvertiseCard({
     <div className="item-info-card last-price">
       <h4 className="card-title">
         {" "}
-        Commercial or residential
+        {/* Commercial or residential */}
       </h4>
       <div className="price">
         <span className="number">
