@@ -16,13 +16,13 @@ export default function MapComponent({
     }
     return feature;
   });
-  console.log("jordonGeo", jordonGeo)
+  // console.log("jordonGeo", jordonGeo)
   const color = useRef("")
     const mapRef = useRef(null);
     const geojsonLayerRef = useRef(null);
 // Convert JSON data to GeoJSON
 function getColor(averagePricePerMeter) {
-  console.log("=== getColor ===", averagePricePerMeter)
+  // console.log("=== getColor ===", averagePricePerMeter)
   if(averagePricePerMeter && averagePricePerMeter !== undefined){
     return averagePricePerMeter > 540 ? '#ff0000' :
     averagePricePerMeter > 516 ? '#FFEDA0' : '#46923C';

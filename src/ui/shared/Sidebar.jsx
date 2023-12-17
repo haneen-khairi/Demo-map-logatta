@@ -3,9 +3,19 @@ import { useState } from "react";
 import Tab from "@mui/material/Tab";
 import { TabContext, TabList, TabPanel } from "@mui/lab";
 import worldIcon from "../../assets/images/icon.webp";
+import Alert from '@mui/material/Alert';
+
 // import TabList from '@mui/lab';
 // import TabPanel from '@mui/lab';
 import { Bar } from "react-chartjs-2";
+import * as React from 'react';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
+import TextField from '@mui/material/TextField';
+// import InputLabel from '@mui/material/InputLabel';
+// import option from '@mui/material/option';
+// import select from '@mui/material/select';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -16,7 +26,18 @@ import {
   Legend,
 } from "chart.js";
 import AdvertiseCard from "../../components/AdvertiseCard";
+import { useForm } from "react-hook-form";
 export default function SidebarInfo({ mapInfo, extraInfo, ads }) {
+  const {
+    register,
+    control,
+    handleSubmit,
+    reset,
+    formState: {errors, isValid}
+  } = useForm({
+
+  })
+  const [calculatedNumber, setCalculatedNumber] = useState(0)
   const [value, setValue] = useState("1");
   const { properties } = mapInfo;
     // console.log("=== ads ===", ads)
@@ -29,7 +50,7 @@ export default function SidebarInfo({ mapInfo, extraInfo, ads }) {
     Legend
   );
 
-  const options = {
+  const option = {
     plugins: {
       title: {
         display: true,
@@ -67,7 +88,67 @@ export default function SidebarInfo({ mapInfo, extraInfo, ads }) {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+  function onSubmit(data){
+    console.log("=== data ===", data)
+    const averagePricePerMeter = parseFloat(extraInfo.average_price_per_meter);
+    let calculationObject = {
+      area_size: averagePricePerMeter * parseFloat(data.area_size),
+      bathroom_num: averagePricePerMeter * parseFloat(data.bathroom_num),
+      room_num: averagePricePerMeter * parseFloat(data.room_num),
+      street_sides: averagePricePerMeter * parseFloat(data.street_sides),
+      floor_num: averagePricePerMeter * parseFloat(data.floor_num) ,
+      interface_option: averagePricePerMeter * parseFloat(data.interface_option) ,
+      construction: averagePricePerMeter * parseFloat(data.construction)
+    }
+    // console.log("price per meter" , extraInfo.average_price_per_meter)
+    console.log("calcs" , calculationObject)
+    // Convert average_price_per_meter to a float (if it's not already)
 
+// Create a new object to store the calculated values
+// const newData = {};
+
+// // Iterate through the keys in the data object
+// for (const key in data) {
+//   if (Object.hasOwnProperty.call(data, key)) {
+//     // Convert the current value to a float (if it's not already)
+//     const value = parseFloat(data[key]);
+    
+//     // Multiply the value by averagePricePerMeter and store it in the new object
+//     if (!isNaN(value)) {
+//       newData[key] = value * averagePricePerMeter;
+//     }
+//   }
+// }
+// console.log("=== new data with multiply ===", newData)
+const sum = Object.values(calculationObject).reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+const total = sum * data.area_size
+console.log("=== total ===", total.toFixed(2) || "null" , "=== sum ===" ,sum)
+setCalculatedNumber(total.toFixed(2) || "null")
+  }
+  const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+  };
+  
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+  
+    // return (
+    //   <div>
+    //     <Button onClick={handleOpen}>Open modal</Button>
+        
+    //   </div>
+    // );
+  
+  
   return (
     <div className="sidebar">
       {/* <div className="scroll-indicator">
@@ -288,7 +369,7 @@ export default function SidebarInfo({ mapInfo, extraInfo, ads }) {
                         </h4>
                         <div className="price">
                         {extraInfo.schools_within_1km}
-                            {/* <Bar options={options} data={data} /> */}
+                            {/* <Bar option={option} data={data} /> */}
                         </div>
                       </div>
                     </div>
@@ -300,10 +381,11 @@ export default function SidebarInfo({ mapInfo, extraInfo, ads }) {
           <TabPanel value="2" style={{ padding: "10px 0" }}>
             <div id="area-view" style={{ display: "block" }}>
               <div className="view">
+              <Button onClick={handleOpen} color="primary">Price hunter</Button>
                 <div className="LandRealStateInfo">
                   <div className="Info-piece">
                     <h3 className="city-title text-center">
-                      Advertisement Lands{" "}
+                      Advertisement Lands{" "} 
                     </h3>
                     <br />
                   </div>
@@ -333,7 +415,7 @@ export default function SidebarInfo({ mapInfo, extraInfo, ads }) {
                     </div>
                   </div>
                 </div>
-
+                  
                 <div className="parcels-list-title text-center">
                   {" "}
                   Check Nearby Lands{" "}
@@ -346,6 +428,106 @@ export default function SidebarInfo({ mapInfo, extraInfo, ads }) {
           </TabPanel>
         </TabContext>
       </Box>
+      <Modal
+      style={{direction: 'ltr'}}
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <Box sx={style}>
+            <Typography id="modal-modal-title" variant="h6" component="h2">
+              Price hunter
+            </Typography>
+            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+              <form onSubmit={handleSubmit(onSubmit)} className="form">
+
+
+
+
+
+        <label htmlFor="type">Type</label>
+        <select
+        name="type"
+          id="type"
+          // id="demo-simple-select"
+          label="type"
+          {...register("type", {required: true})}
+          onChange={(e) => console.log("== e ===", e)}
+        >
+          <option value={"Apartment"} selected>Apartment</option>
+        </select>
+  
+
+              <TextField id="room_num" type="number" name="room_num" {...register("room_num", {required: true})} label="Room number" variant="standard" />
+              <TextField id="bathroom_num" type="number" name="bathroom_num" {...register("bathroom_num", {required: true})} label="Bathroom number" variant="standard" />
+              <TextField id="area_size" type="number" name="area_size" {...register("area_size", {required: true})} label="Area size" variant="standard" />
+              <TextField id="street_sides" type="number" name="street_sides" {...register("street_sides", {required: true})} label="Street side" variant="standard" />
+              <label htmlFor="floor_num">Floor num</label>
+        <select
+          id="floor_num"
+          // id="demo-simple-select"
+          label="Floor number"
+          name="floor_num"
+          {...register("floor_num", {required: true})}
+          onChange={(e) => console.log("== floor_num ===", e)}
+        >
+          
+
+          <option value={0.17}>Ground floor apartment</option>
+          <option value={0.09}>Last apartment with roof</option>
+          <option value={0.04}>First floor apartment</option>
+          <option value={0.01}>Third floor apartment</option>
+          <option value={-0.02}>Settlement apartment</option>
+          <option value={-0.04}>Second floor apartment</option>
+          <option value={-0.08}>Fourth apartment</option>
+          <option value={-0.11}>Semi-ground floor apartment</option>
+        </select>
+              <label htmlFor="interface_option">Interface option</label>
+        <select
+          id="interface_option"
+          // id="demo-simple-select"
+          name="interface_option"
+          label="Interface option"
+          {...register("interface_option", {required: true})}
+          onChange={(e) => console.log("== floor_num ===", e)}
+        >
+          
+
+
+          <option value={0.08} selected>Eastern</option>
+          <option value={0.05}>Southeast</option>
+          <option value={0.05}>Southwestern</option>
+          <option value={-0.01}>North-west</option>
+          <option value={-0.02}>Northeast</option>
+          <option value={-0.03}>North</option>
+          <option value={-0.03}>Western</option>
+          <option value={-0.1}>Southern</option>
+        </select>
+              <label htmlFor="construction">Construction age dropdown</label>
+        <select
+          id="construction"
+          // id="demo-simple-select"
+          name="construction"
+          label="Construction age dropdown"
+          {...register("construction", {required: true})}
+          onChange={(e) => console.log("== floor_num ===", e)}
+        >
+          <option value={0.15} selected>0-11 months</option>
+          <option value={0.13}>1-5 years</option>
+          <option value={0.2}>6-9 years</option>
+          <option value={-0.04}>Under construction</option>
+          <option value={-0.1}>10-19 years old</option>
+          <option value={-0.27}>More than 20 years</option>
+        </select>
+        <Button type="submit">Calculate</Button>
+              </form>
+            </Typography>
+        <Alert variant="filled" severity="success">
+  New price meter: {calculatedNumber}
+</Alert>
+          </Box>
+        </Modal>
     </div>
   );
 }
