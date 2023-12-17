@@ -1,5 +1,5 @@
 import React from 'react'
-import worldIcon from "../assets/images/icon.svg";
+import worldIcon from "../assets/images/icon.webp";
 
 export default function AdvertiseCard({
     ad

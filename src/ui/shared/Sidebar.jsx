@@ -2,7 +2,7 @@ import Box from "@mui/material/Box";
 import { useState } from "react";
 import Tab from "@mui/material/Tab";
 import { TabContext, TabList, TabPanel } from "@mui/lab";
-import worldIcon from "../../assets/images/icon.svg";
+import worldIcon from "../../assets/images/icon.webp";
 // import TabList from '@mui/lab';
 // import TabPanel from '@mui/lab';
 import { Bar } from "react-chartjs-2";
@@ -69,12 +69,12 @@ export default function SidebarInfo({ mapInfo, extraInfo, ads }) {
   };
 
   return (
-    <div className="sidebar ">
+    <div className="sidebar">
       {/* <div className="scroll-indicator">
                 <img src="https://www.suhail.aihttps://www.suhail.ai/static/media/residential.b04171300181c1014501.svg" alt="scroll indicator" />
             </div> */}
 
-      <Box sx={{ width: "100%", typography: "body1" }}>
+      <Box sx={{ width: "100%", typography: "body1"}}>
         <TabContext value={value}>
           <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
             <TabList
@@ -111,16 +111,16 @@ export default function SidebarInfo({ mapInfo, extraInfo, ads }) {
             </div> */}
             <div id="area-view" style={{ display: "block" }}>
               <div className="view">
-                <div className="LandRealStateInfo">
+                {/* <div className="LandRealStateInfo">
                   <div className="Info-piece">
-                    {/* اسم القطعه / المنطقة */}
-                    {/* <h3 className="city-title">الحمراء</h3> */}
+                    اسم القطعه / المنطقة
+                    <h3 className="city-title">الحمراء</h3>
                     <br/>
                   </div>
-                </div>
+                </div> */}
 
                 <div className="parcels-list">
-                  <div className="parcels-list_item">
+                  <div className="parcels-list_item" style={{  padding:"20px" }}>
                     <div className="item-header ">
                       <div className="gather">
                         <div
@@ -128,6 +128,7 @@ export default function SidebarInfo({ mapInfo, extraInfo, ads }) {
                           style={{ backgroundColor: "#eef0ff" }}
                         >
                           <img src={worldIcon} alt="icon" />
+                          <br/>
                         </div>
                         {/* اسم القطعه */}
                         <h3 className="card-title GBF color-light">
@@ -278,15 +279,16 @@ export default function SidebarInfo({ mapInfo, extraInfo, ads }) {
                       </div>
                     </div>
 
-                    <div className="item-content">
-                      <div className="item-info-card text-center">
+                    <div className="item-content " style={{  padding:"20px" }}>
+                      <div className="item-info-card total-parcels">
                         <h4 className="card-title">
                           <span className="last-date flex gap-1 justify-center">
                             School Numbers <svg fill="#f3f3b5" xmlns="http://www.w3.org/2000/svg" height="16" width="20" viewBox="0 0 640 512"><path d="M0 224v272c0 8.8 7.2 16 16 16h80V192H32c-17.7 0-32 14.3-32 32zm360-48h-24v-40c0-4.4-3.6-8-8-8h-16c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8zm137.8-64l-160-106.7a32 32 0 0 0 -35.5 0l-160 106.7A32 32 0 0 0 128 138.7V512h128V368c0-8.8 7.2-16 16-16h96c8.8 0 16 7.2 16 16v144h128V138.7c0-10.7-5.4-20.7-14.3-26.6zM320 256c-44.2 0-80-35.8-80-80s35.8-80 80-80 80 35.8 80 80-35.8 80-80 80zm288-64h-64v320h80c8.8 0 16-7.2 16-16V224c0-17.7-14.3-32-32-32z"/></svg>
                           </span>
                         </h4>
                         <div className="price">
-                            <Bar options={options} data={data} />;
+                        {extraInfo.schools_within_1km}
+                            {/* <Bar options={options} data={data} /> */}
                         </div>
                       </div>
                     </div>
