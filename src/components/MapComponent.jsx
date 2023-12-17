@@ -125,7 +125,6 @@ function getColor(averagePricePerMeter) {
     return (
         <div>
             <div ref={mapRef} style={{ height: '80vh', width: '100%' }} />
-            {`color ${color.current}`}
         </div>
     );
 }

@@ -327,7 +327,7 @@ export default function SidebarInfo({ mapInfo, extraInfo, ads }) {
                       >
                         {/* متوسط سعر المتر */}
                         <span>
-                          {extraInfo.average_price_per_meter.toFixed(4)}
+                          {extraInfo.average_price_per_meter?.toFixed(4) || ""}
                         </span>
                       </div>
                     </div>
