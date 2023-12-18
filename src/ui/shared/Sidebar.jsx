@@ -153,7 +153,7 @@ function onSubmit(data) {
 
   // Multiply newAvgPricePerMeter with the area value
   const preTotal = (newAvgPricePerMeter * data.area_size);
-  const total = preTotal - (preTotal  / 0.3);
+  const total = preTotal - (preTotal  * 0.3);
 
   // Log the calculated values
   console.log("Sum of options:", sumOptions);
