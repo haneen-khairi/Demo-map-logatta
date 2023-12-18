@@ -88,43 +88,82 @@ export default function SidebarInfo({ mapInfo, extraInfo, ads }) {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-  function onSubmit(data){
-    console.log("=== data ===", data)
-    const averagePricePerMeter = parseFloat(extraInfo.average_price_per_meter);
-    let calculationObject = {
-      area_size: averagePricePerMeter * parseFloat(data.area_size),
-      bathroom_num: averagePricePerMeter * parseFloat(data.bathroom_num),
-      room_num: averagePricePerMeter * parseFloat(data.room_num),
-      street_sides: averagePricePerMeter * parseFloat(data.street_sides),
-      floor_num: averagePricePerMeter * parseFloat(data.floor_num) ,
-      interface_option: averagePricePerMeter * parseFloat(data.interface_option) ,
-      construction: averagePricePerMeter * parseFloat(data.construction)
-    }
-    // console.log("price per meter" , extraInfo.average_price_per_meter)
-    console.log("calcs" , calculationObject)
-    // Convert average_price_per_meter to a float (if it's not already)
+//   function onSubmit(data){
+//     console.log("=== data ===", data)
+//     const averagePricePerMeter = parseFloat(extraInfo.average_price_per_meter);
+//     // console.log("=== averagePricePerMeter ===", averagePricePerMeter)
 
-// Create a new object to store the calculated values
-// const newData = {};
-
-// // Iterate through the keys in the data object
-// for (const key in data) {
-//   if (Object.hasOwnProperty.call(data, key)) {
-//     // Convert the current value to a float (if it's not already)
-//     const value = parseFloat(data[key]);
-    
-//     // Multiply the value by averagePricePerMeter and store it in the new object
-//     if (!isNaN(value)) {
-//       newData[key] = value * averagePricePerMeter;
+//     let calculationObject = {
+//       // area_size: newAveragePricePerMeter * parseFloat(data.area_size),
+//       bathroom_num: averagePricePerMeter * parseFloat(data.bathroom_num),
+//       room_num: averagePricePerMeter * parseFloat(data.room_num),
+//       street_sides: averagePricePerMeter * parseFloat(data.street_sides),
+//       floor_num: averagePricePerMeter * parseFloat(data.floor_num) ,
+//       interface_option: averagePricePerMeter * parseFloat(data.interface_option) ,
+//       construction: averagePricePerMeter * parseFloat(data.construction)
+      
 //     }
+//     // const newAveragePricePerMeter = (calculationObject ) + averagePricePerMeter;
+//     // console.log("price per meter" , extraInfo.average_price_per_meter)
+//     console.log("calcs" , calculationObject)
+//     // Convert average_price_per_meter to a float (if it's not already)
+
+// // Create a new object to store the calculated values
+// // const newData = {};
+
+// // // Iterate through the keys in the data object
+// // for (const key in data) {
+// //   if (Object.hasOwnProperty.call(data, key)) {
+// //     // Convert the current value to a float (if it's not already)
+// //     const value = parseFloat(data[key]);
+    
+// //     // Multiply the value by averagePricePerMeter and store it in the new object
+// //     if (!isNaN(value)) {
+// //       newData[key] = value * averagePricePerMeter;
+// //     }
+// //   }
+// // }
+// // console.log("=== new data with multiply ===", newData)
+// const sum = Object.values(calculationObject).reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+// console.log("=== sumsumsumsum ===", sum)
+// const total = sum * data.area_size
+// console.log("=== total ===", total.toFixed(2) || "null" , "=== sum ===" ,sum)
+// setCalculatedNumber(total.toFixed(2) || "null")
 //   }
-// }
-// console.log("=== new data with multiply ===", newData)
-const sum = Object.values(calculationObject).reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-const total = sum * data.area_size
-console.log("=== total ===", total.toFixed(2) || "null" , "=== sum ===" ,sum)
-setCalculatedNumber(total.toFixed(2) || "null")
-  }
+function onSubmit(data) {
+  // Parse averagePricePerMeter to a floating-point number
+  const averagePricePerMeter = parseFloat(extraInfo.average_price_per_meter);
+
+  // Sum the values of the specified options
+  const sumOptions = [
+      'room_num', 
+      'floor_num',
+      'interface_option',
+      'construction'
+  ].reduce((accumulator, option) => {
+      const optionValue =  parseFloat(data[option]);
+      return accumulator + optionValue;
+  }, 0);
+
+  // Multiply the sum of options by averagePricePerMeter
+  const newAvgPrice = sumOptions * averagePricePerMeter;
+
+  // Sum newAvgPrice with averagePricePerMeter
+  const newAvgPricePerMeter = newAvgPrice + averagePricePerMeter;
+
+  // Multiply newAvgPricePerMeter with the area value
+  const total = newAvgPricePerMeter * data.area_size;
+
+  // Log the calculated values
+  console.log("Sum of options:", sumOptions);
+  console.log("New Avg Price:", newAvgPrice);
+  console.log("New Avg Price Per Meter:", newAvgPricePerMeter);
+  console.log("Total:", total.toFixed(2) || "null");
+
+  // Set the calculated total to some function (setCalculatedNumber)
+  setCalculatedNumber(total.toFixed(2) || "null");
+}
+
   const style = {
     position: 'absolute',
     top: '50%',
@@ -459,7 +498,21 @@ setCalculatedNumber(total.toFixed(2) || "null")
         </select>
   
 
-              <TextField id="room_num" type="number" name="room_num" {...register("room_num", {required: true})} label="Room number" variant="standard" />
+              {/* <TextField id="room_num" type="number" name="room_num" {...register("room_num", {required: true})} label="Room number" variant="standard" /> */}
+          <label htmlFor="room_num">Room Num.</label>
+              <select
+          id="room_num"
+          // id="demo-simple-select"
+          name="room_num"
+          label="Room number"
+          {...register("room_num", {required: true})}
+          onChange={(e) => console.log("== room_num ===", e)}
+        >
+          <option value={0.03} selected>2</option>
+          <option value={-0.02}>3</option>
+          <option value={0.6}>4</option>
+          <option value={0.02}>5</option> 
+        </select>
               <TextField id="bathroom_num" type="number" name="bathroom_num" {...register("bathroom_num", {required: true})} label="Bathroom number" variant="standard" />
               <TextField id="area_size" type="number" name="area_size" {...register("area_size", {required: true})} label="Area size" variant="standard" />
               <TextField id="street_sides" type="number" name="street_sides" {...register("street_sides", {required: true})} label="Street side" variant="standard" />
